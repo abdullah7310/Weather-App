@@ -1,0 +1,213 @@
+body{
+   /* background-image: url('https://images.tech.co/wp-content/uploads/2015/06/weather.jpg'); */
+   background-image: url('https://t4.ftcdn.net/jpg/07/91/11/91/360_F_791119155_RgJZ0mJqqv1gELKeQ7WdeITPVPT9iggw.jpg');
+   background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    /* border: 2px solid purple; */
+    width: 60%;
+    margin: auto;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(97, 98, 96, 0.8);
+    background-color: rgba(6, 214, 103, 0.4);
+    backdrop-filter: blur(10px);
+
+    input{
+        width: 60%;
+        padding: 10px 10px;
+        border-radius: 10px;
+        border: none;
+    }
+    button{
+        width: 20%;
+        padding: 10px 10px;
+        border-radius: 10px;
+        border: none;
+        transition: 0.3s ease all;
+    }
+    button:active{
+        border: 2px solid peru;
+    }
+    button:hover{
+        padding: 14px 14px;
+    }
+}
+
+#wholeDate{
+    /* border: 2px solid red; */
+    width: 70%;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 1rem 0;
+    margin-bottom:1rem;
+    /* margin: auto; */
+    background-color: rgba(240, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    /* background: transparent; */
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(98, 96, 96, 0.8);
+    justify-content: center;
+    .weather-heading{
+        /* margin: auto; */
+        text-align: center;
+        /* border: 2px solid white; */
+    }
+    #mainDiv{
+        /* border: 2px solid blue; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .date-div{
+        height: 150px;
+        width: 200px;
+        /* border: 2px solid green; */
+        display: flex;
+        padding: 1rem;
+        background-color: rgb(244, 205, 119);
+        border-radius: 10px;
+        align-items: center;
+        box-shadow: 0px 4px 8px rgba(98, 96, 96, 0.8);
+        margin-right: 10px;
+        margin-top: 10px;
+        transition: 0.3s ease all;
+        flex-direction: column;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+
+        .currentWeatherImage{
+            height: 50px;
+            border-radius: 50%;
+            padding: 0;
+            /* border: 2px solid black; */
+        }
+    }
+    .date-div:hover{
+        padding: 1.5rem;
+
+    }
+}
+
+#next5dayWeather{
+    /* border: 2px solid green; */
+    margin-top: 0px;
+    width: 65%;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    transition: 0.3s ease all;
+    display: flex;
+    background-color: aquamarine;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    /* flex-wrap: wrap; */
+
+    .nextWeather{
+        /* border: 2px solid purple; */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .card{
+            height: 10rem;
+            display: flex;
+            background-color: rgb(244, 205, 119);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(98, 96, 96, 0.8);
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 12rem;
+            margin-left: 10px;
+            margin-top: 10px;
+            transition: 0.3s ease all;
+            /* border: 2px solid black; */
+
+            div{
+                height: 30px;
+                /* border: 2px solid purple; */
+                padding: 0 5px;
+            }
+
+            .weatherImage{
+                margin-top: 10px;
+                /* border: 2px solid green; */
+                height: 30px;
+                border-radius: 50%;
+                padding: 0;
+            }
+        }
+        .card:hover{
+            height: 11rem;
+        }
+    }
+
+}
+
+#next5dayWeather:hover{
+    box-shadow: 0px 4px 8px rgba(98, 96, 96, 0.8);
+}
+.card-div{
+    /* border: 2px solid green; */
+    padding: 0;
+
+    p{
+        margin: 0;
+        display: inline;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    form {
+        width: 85%;
+        padding: 1.5rem;
+
+    }
+
+    form input {
+        width: 92%;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    form button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #wholeDate, #next5dayWeather {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .date-div, .card {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .currentWeatherImage, .weatherImage {
+        height: 40px;
+        margin-top: 5px;
+    }
+}
